@@ -18,7 +18,7 @@ jobs:
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: install gcc
-        run: sudo apt update && sudo apt install gcc build-tools
+        run: sudo apt update && sudo apt install build-essential
       - name: Run build-wrapper
         run: |
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }}gcc Code.c
